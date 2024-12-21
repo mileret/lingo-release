@@ -61,28 +61,28 @@ To run the code, you need to have the following installed:
 4. **Install Blender**:
     - We use [Blender](https://www.blender.org/) for visualization of the result.
     - Please download Blender3.6 from its [official website](https://download.blender.org/release/Blender3.6/).
-    - Then, download [SMPL-X Blender Add-on](https://smpl-x.is.tue.mpg.de/download.php) and activate it in Blender.
+    - (Optional) Then, download [SMPL-X Blender Add-on](https://smpl-x.is.tue.mpg.de/download.php) and activate it in Blender.
 
 ## Inference and Visualization
 
-1. **Get Model Input**
+1. **Get Model Input**:
 
-Open `vis.blend` with [Blender](https://www.blender.org/). Change the `text`, `start_location`, `end_goal` and `hand_goal`. Then run `get_input` in `vis.blend`.
+    Open `vis.blend` with [Blender](https://www.blender.org/). Change the `text`, `start_location`, `end_goal` and `hand_goal`. Then run `get_input` in `vis.blend`.
 
-2. **Inference**
+2. **Inference**:
 
-To synthesis human motions using our model, run
+    To synthesis human motions using our model, run
 
-```sh
-cd code
-python sample_lingo.py
-```
+    ```sh
+    cd code
+    python sample_lingo.py
+    ```
 
-3. **Visualization in Blender**
+3. **Visualization in Blender**:
 
-Run `vis_output` in `vis.blend`.
+    Run `vis_output` in `vis.blend`.
 
-The generated human motion will be displayed in Blender.
+    The generated human motion will be displayed in Blender.
 
 
 # Training
@@ -93,8 +93,9 @@ This README provides instructions on setting up and training our model using the
 ## Prerequisites
 
 Before you begin, make sure you have the following software installed:
+
 ```sh
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Model Training
