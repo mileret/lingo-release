@@ -58,11 +58,16 @@ To run the code, you need to have the following installed:
     pip install -r requirements.txt
     ```
 
+4. **Install Blender**:
+    - We use [Blender](https://www.blender.org/) for visualization of the result.
+    - Please download Blender3.6 from its [official website](https://download.blender.org/release/Blender3.6/).
+    - Then, download [SMPL-X Blender Add-on](https://smpl-x.is.tue.mpg.de/download.php) and activate it in Blender.
+
 ## Inference and Visualization
 
 1. **Get Model Input**
 
-Open `vis.blend` with Blender. Change the `text`, `start_location`, `end_goal` and `hand_goal`. Then run `get_input` in `vis.blend`.
+Open `vis.blend` with [Blender](https://www.blender.org/). Change the `text`, `start_location`, `end_goal` and `hand_goal`. Then run `get_input` in `vis.blend`.
 
 2. **Inference**
 
