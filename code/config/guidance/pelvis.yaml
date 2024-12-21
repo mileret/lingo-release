@@ -1,0 +1,7 @@
+pelvis:
+  seq_len: ${dataset.seq_len}
+  step: ${dataset.step}
+  mask_ind: 0
+  mask_y: false
+  emb_f: 0
+  no_scene: true

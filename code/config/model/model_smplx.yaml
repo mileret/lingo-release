@@ -1,0 +1,6 @@
+model_smplx:
+  _target_: models.joints_to_smplx.JointsToSMPLX
+  input_dim: ${times:${dataset.nb_joints},3}
+  output_dim: 132
+  hidden_dim: 128
+  ckpt: ${oc.env:ROOT_DIR}/ckpts/joints2smplx/train_joint2smpl__input_84__hidden_128__all__last.pth

@@ -1,0 +1,18 @@
+synhsi_body:
+  _target_: models.synhsi.Unet
+  dim_model: 512
+  num_heads: 16
+  num_layers: 8
+  dropout_p: 0.1
+  nb_voxels: ${dataset.nb_voxels}
+  free_p: 0.1
+  ac_type: last_add_first_token
+  dim_input: ${times:${dataset.nb_joints},3}
+  dim_output: ${times:${dataset.nb_joints},3}
+  scene_type: ${scene_type}
+  load_scene: ${load_scene}
+  load_language: ${load_language}
+  load_hand_goal: ${load_hand_goal}
+  load_pelvis_goal: ${load_pelvis_goal}
+  language_feature_dim: 768
+  ckpt: ${ckpt_path}

@@ -1,0 +1,44 @@
+defaults:
+  - dataset: lingo
+  - guidance:
+      - pelvis
+  - model:
+      - synhsi_body
+  - sampler:
+      - pelvis
+  - _self_
+
+exp_name: test
+train: true
+load_state_dict: false
+batch_size: 128
+lr: 0.0001
+epochs: 1000
+device: cuda:0
+ckpt_name: None
+use_tensorboard: true
+ckpt_interval: 20
+
+exp_dir: ${oc.env:ROOT_DIR}/results/${exp_name}
+smpl_dir: ${oc.env:ROOT_DIR}/smpl_models
+
+num_gpus: 1
+num_workers: 8
+scene_type: occ_two
+max_window_size: 16
+motion_len: 100000
+vis: false
+start_type: stand
+
+load_language: true
+load_scene: true
+use_pi: true
+load_hand_goal: true
+load_pelvis_goal: true
+auto_regre_num: 2
+
+ckpt_path: None
+
+hydra:
+  run:
+    dir: ${exp_dir}

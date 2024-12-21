@@ -1,0 +1,7 @@
+scheduler:
+  num_heads: 8
+  num_layers: 3
+  dropout_p: 0.1
+  dim_input: ${times:${dataset.nb_joints},3}
+  dim_model: 512
+  language_feature_dim: 768

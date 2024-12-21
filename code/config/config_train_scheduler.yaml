@@ -1,0 +1,32 @@
+defaults:
+  - dataset: scheduler
+  - model: scheduler
+  - _self_
+
+exp_name: scheduler
+train: true
+load_state_dict: true
+batch_size: 1024
+lr: 0.0001
+epochs: 1000
+device: cuda:0
+ckpt_name: None
+use_tensorboard: true
+ckpt_interval: 1
+
+exp_dir: ${oc.env:ROOT_DIR}/results/${exp_name}
+smpl_dir: ${oc.env:ROOT_DIR}/smpl_models
+
+num_gpus: 1
+num_workers: 0
+max_window_size: 16
+motion_len: 100000
+load_language: true
+load_scene: true
+use_pi: true
+load_hand_goal: true
+load_pelvis_goal: true
+
+hydra:
+  run:
+    dir: ${exp_dir}

@@ -1,0 +1,57 @@
+defaults:
+  - _self_
+  - dataset: lingo
+  - guidance:
+      - pelvis
+  - model:
+      - model_smplx
+      - synhsi_body
+      - scheduler
+  - sampler:
+      - pelvis
+
+train: false
+device: cuda
+batch_size: 1
+interp_s: 3
+
+use_scheduler: true
+scheduler_model_path: ${oc.env:ROOT_DIR}/ckpts/scheduler/scheduler.pth
+scheduler_threshold: 0.7
+locomotion_threshold: 1.0
+
+vis: true
+start_type: stand
+
+repeat_time: 0
+seg_num: 1
+seg_len: 4 # episode
+
+speed: 0.8
+
+test_setting: demo-21
+exp_dir: ${oc.env:ROOT_DIR}/results/outputs
+ckpt_path: ${oc.env:ROOT_DIR}/ckpts/model/bs128__ws16__scene_occ_two.pth
+input_path: ${oc.env:ROOT_DIR}/results/inputs/${test_setting}.pkl
+smpl_dir: ${oc.env:ROOT_DIR}/smpl_models
+
+scene_type: occ_two
+
+max_window_size: 16
+
+motion_len: 10000000
+
+load_language: true
+load_scene: true
+use_pi: true
+load_hand_goal: true
+load_pelvis_goal: true
+
+auto_regre_num: 2 # prefixed frames for each segment
+
+num_gpus: 1
+num_workers: 0
+
+hydra:
+  run:
+    dir: ${exp_dir}

@@ -1,0 +1,11 @@
+pelvis:
+  _target_: models.synhsi.Sampler
+  device: ${device}
+  mask_ind: ${guidance.pelvis.mask_ind}
+  emb_f: ${guidance.pelvis.emb_f}
+  batch_size: ${batch_size}
+  channel: ${times:${dataset.nb_joints},3}
+  auto_regre_num: ${auto_regre_num}
+  timesteps: 100
+  motion_len: ${motion_len}
+  scene_type: ${scene_type}

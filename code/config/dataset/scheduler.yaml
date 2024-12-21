@@ -1,0 +1,18 @@
+folder: ${oc.env:ROOT_DIR}/dataset
+device: ${device}
+batch_size: ${batch_size}
+step: 3
+nb_voxels: [32, 32, 32]
+mesh_grid: [-0.6, 0.6, 0.1, 1.2, -0.6, 0.6]
+#mesh_grid: [-1., 1., 0.1, 1.2, -1., 1.]
+test_scene_name: None
+train: ${train}
+load_language: ${load_language}
+load_scene: ${load_scene}
+load_hand_goal: ${load_hand_goal}
+load_pelvis_goal: ${load_pelvis_goal}
+use_pi: ${use_pi}
+max_window_size: ${max_window_size}
+
+joints_ind: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 23, 24, 25, 34, 40, 49]
+nb_joints: 28
