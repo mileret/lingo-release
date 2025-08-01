@@ -8,7 +8,7 @@
 
 # LINGO Dataset
 
-Please download the LINGO dataset from [Google Drive](https://drive.google.com/file/d/1RadpLt-woPvsIGk9yDW7yX7br3sRO-zi/view?usp=sharing). The content inside the download link will be continuously updated to ensure you have access to the most recent data.
+Please download the LINGO dataset from [Google Drive](https://drive.google.com/drive/folders/1oJ-dnrMahyxoVQxDVAYdPe3MC17kUFAa?usp=sharing). The content inside the download link will be continuously updated to ensure you have access to the most recent data.
 
 Explanation of the files and folders of the LINGO dataset:
 
